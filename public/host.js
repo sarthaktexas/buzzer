@@ -8,6 +8,8 @@ socket.on('active', (numberActive) => {
 })
 
 socket.on('buzzes', (buzzes) => {
+  let audio = new Audio('https://sarthakmohanty.s3.amazonaws.com/public/uploads/Notification_Bell.mp3');
+  audio.play();
   buzzList.innerHTML = buzzes
     .map(buzz => {
       const p = buzz.split('-')

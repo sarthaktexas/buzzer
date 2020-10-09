@@ -38,6 +38,12 @@ buzzer.addEventListener('click', (e) => {
   socket.emit('buzz', user)
 })
 
+buzzer.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    socket.emit('buzz', user)
+  }
+})
+
 editInfo.addEventListener('click', () => {
   joined.classList.add('hidden')
   form.classList.remove('hidden')

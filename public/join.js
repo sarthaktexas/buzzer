@@ -38,7 +38,7 @@ buzzer.addEventListener('click', (e) => {
   socket.emit('buzz', user)
 })
 
-buzzer.addEventListener('keyup', event => {
+body.addEventListener('keyup', event => {
   if (event.code === 'Space') {
     socket.emit('buzz', user)
   }
